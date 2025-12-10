@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#controls {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+button.active {
+  background: #2e7d32;
+  color: white;
+}
+
+#map svg {
+  width: 900px;
+  height: auto;
+}
+
+path {
+  stroke: #444;
+  stroke-width: .5;
+  transition: fill .25s;
+}
+
+path:hover {
+  stroke-width: 1.5;
+}
+
+#tooltip {
+  position: fixed;
+  display: none;
+  background: white;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 12px;
+}
+#map-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;     /* IMPORTANT: prevents cropping */
+}
+
+#map svg,
+#map-container-2 svg,
+#map-container-3 svg {
+  width: 100%;
+  height: auto;          /* IMPORTANT: keeps aspect ratio */
+  max-height: 70vh;      /* prevents it from being too tall */
+}
